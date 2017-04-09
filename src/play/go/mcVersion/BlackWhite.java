@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by jieluo on 2017-04-05.
  */
 public class BlackWhite {
-    private int line = 4;
+    private int line = 8;
     private int[][] board;
     private int blackColor = -1;
     private int whiteColor = 1;
