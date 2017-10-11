@@ -97,7 +97,7 @@ public class AttackGame {
             System.out.println("The target out of your ability.");
             return false;
         }else if(board[target.x][target.y] != null){
-            System.out.println("The target is occupied by others.");
+            System.out.println("The target is occupied by othersPeoplesProject.");
             return false;
         }else {
             // update the board info

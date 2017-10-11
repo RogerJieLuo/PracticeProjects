@@ -1,6 +1,6 @@
 package play.cheses.pieces;
 
-import play.common.Point;
+import common.Point;
 
 /**
  * Created by jieluo on 2017-04-10.

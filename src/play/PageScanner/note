@@ -1,0 +1,8 @@
+scan a page through the camera or the photo
+thoughts:
+1. use the pix color difference to store a line of the edge of the scanned page.
+2. capture the 4 corners of the camera or photo
+    for top left corner, capture 2 small square from top left and bottom right, check these 2 squares main color difference
+    once get the color difference, narrow the square to 2 lines.
+3. use a line move from top to bottom(or other side lines), once there are main color shows up, tile the line to match the edge of the page.
+   once find a line, then find the two ends of the line and then find the other lines of the page.

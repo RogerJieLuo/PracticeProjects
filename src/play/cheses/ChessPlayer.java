@@ -1,7 +1,7 @@
 package play.cheses;
 
 import play.cheses.pieces.*;
-import play.common.Point;
+import common.Point;
 
 import java.util.HashMap;
 import java.util.Scanner;

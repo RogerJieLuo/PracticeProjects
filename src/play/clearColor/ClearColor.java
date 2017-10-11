@@ -7,8 +7,8 @@ import java.util.Scanner;
  * Created by jieluo on 2017-06-03.
  */
 public class ClearColor {
-    private int x = 6;
-    private int y = 4;
+    private int x = 12;
+    private int y = 8;
     private int[][] board;
     private int[] color = {1,2,3,4};
     boolean[][] check = new boolean[x][y];

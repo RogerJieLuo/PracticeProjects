@@ -1,8 +1,7 @@
-package play.go;
+package play.blackAndWhite;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Stack;
 
 /**
  * Created by jieluo on 2017-04-01.

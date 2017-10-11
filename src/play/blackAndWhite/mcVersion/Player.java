@@ -1,4 +1,4 @@
-package play.go.mcVersion;
+package play.blackAndWhite.mcVersion;
 
 import java.util.Scanner;
 

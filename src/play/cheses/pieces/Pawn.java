@@ -1,6 +1,6 @@
 package play.cheses.pieces;
 
-import play.common.Point;
+import common.Point;
 
 /**
  * Created by jieluo on 2017-04-10.
@@ -41,7 +41,7 @@ public class Pawn extends Piece {
         return false;
     }
 
-    // different move when capture others
+    // different move when capture othersPeoplesProject
 //    boolean checkMoveAndCapture(Point target){
 //        Point position = super.getPosition();
 //

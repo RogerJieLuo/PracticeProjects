@@ -1,4 +1,4 @@
-package play.go.mcVersion;
+package play.blackAndWhite.mcVersion;
 
 /**
  * Created by jieluo on 2017-04-05.

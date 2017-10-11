@@ -166,7 +166,7 @@
 //                if(Math.abs(target.x - position.x)+Math.abs(target.y - position.y) > moveStep){
 //                    System.out.println("The target out of your ability.");
 //                }else if(board[target.x][target.y] != null){
-//                    System.out.println("The target is occupied by others.");
+//                    System.out.println("The target is occupied by othersPeoplesProject.");
 //                }else {
 //                    board[position.x][position.y] = null;
 //                    board[target.x][target.y] = this;

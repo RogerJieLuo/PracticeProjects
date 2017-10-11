@@ -1,11 +1,10 @@
 package play.cheses;
 
-import play.SimpleAttack.mcVersion.Player;
 import play.cheses.pieces.King;
 import play.cheses.pieces.Pawn;
 import play.cheses.pieces.Piece;
 import play.cheses.pieces.Rook;
-import play.common.Point;
+import common.Point;
 
 /**
  * Created by jieluo on 2017-04-10.
