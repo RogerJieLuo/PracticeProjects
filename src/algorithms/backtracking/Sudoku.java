@@ -8,6 +8,7 @@ public class Sudoku {
         new Sudoku().run();
     }
     private void run(){
+        final long startTime = System.nanoTime();
         int[][] sudoku = {
                 {3,0,6,5,0,8,4,0,0},
                 {5,2,0,0,0,0,0,0,0},
@@ -19,15 +20,8 @@ public class Sudoku {
                 {0,0,0,0,0,0,0,7,4},
                 {0,0,5,2,0,6,3,0,0}
         };
-        int rest = sudoku.length * sudoku[0].length;
-        for(int[] r: sudoku){
-            for(int c: r){
-                if(c > 0)
-                    rest --;
-            }
-        }
-        boolean completed = false;
-        completed = solve(sudoku, 0, 0);
+        String option = "123456789";
+        boolean completed = solve(sudoku, 0, 0);
         if(completed){
             System.out.println("Success:");
             display(sudoku);
@@ -35,37 +29,26 @@ public class Sudoku {
             System.out.println("Failed");
             display(sudoku);
         }
+        System.out.println("System runs: " + (System.nanoTime() - startTime)/1000000000 + " secs");
     }
 
     private boolean solve(int[][] sudoku, int x, int y){
+        // if the cell already filled with num
         if(sudoku[x][y] != 0) {
-            int tx, ty;
-            if(y+1 < sudoku[x].length){
-                tx = x;
-                ty = y+1;
-            }else if (x+1 < sudoku.length){
-                tx = x+1;
-                ty = 0;
-            }else {
+            int[] cell = getNextCell(sudoku,x,y);
+            if(cell[0] == -1 && cell[1] == -1)
                 return true;
-            }
-            if(solve(sudoku,tx,ty))
+            if(solve(sudoku,cell[0],cell[1]))
                 return true;
         }
+
         for(int i = 1;i<=9;i++){
             sudoku[x][y] = i;
             if(isValid(sudoku, x, y)){
-                int tx, ty;
-                if(y+1 < sudoku[x].length){
-                    tx = x;
-                    ty = y+1;
-                }else if (x+1 < sudoku.length){
-                    tx = x+1;
-                    ty = 0;
-                }else {
+                int[] cell = getNextCell(sudoku,x,y);
+                if(cell[0] == -1 && cell[1] == -1)
                     return true;
-                }
-                if(solve(sudoku,tx,ty))
+                if(solve(sudoku,cell[0],cell[1]))
                     return true;
             }
         }
@@ -75,15 +58,12 @@ public class Sudoku {
 
     private int[] getNextCell(int[][] sudoku, int x, int y){
         if(y+1 < sudoku[x].length){
-            y = y+1;
+            return new int[]{x, y+1};
         }else if (x+1 < sudoku.length){
-            x = x+1;
-            y = 0;
+            return new int[]{x+1, 0};
         }else{
-            x = -1;
-            y = -1;
+            return new int[]{-1,-1};
         }
-        return new int[]{x, y};
     }
 
     private boolean isValid(int[][] sudoku, int x, int y){
@@ -117,6 +97,4 @@ public class Sudoku {
             System.out.println();
         }
     }
-
-
 }
